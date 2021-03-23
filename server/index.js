@@ -35,7 +35,11 @@ app.post('/forgot', asyncHandler(async (req, res) => {
 }))
 
 app.use((err, req, res, next) => {
-    res.status(500).json({ error: err.message })
+    res.status(500).json({
+        status: err.code,
+        message: err.message,
+        detailed: err.response?.body,
+    })
 })
 
 app.listen(PORT, () => console.log(`open http://localhost:${PORT}`))
