@@ -34,4 +34,8 @@ app.post('/forgot', asyncHandler(async (req, res) => {
     res.json({ message: 'email sent' })
 }))
 
+app.use((err, req, res, next) => {
+    res.status(500).json({ error: err.message })
+})
+
 app.listen(PORT, () => console.log(`open http://localhost:${PORT}`))
