@@ -19,3 +19,14 @@ npm start
 ```
 
 if using [VSCode REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin, open `_.http` and run the request
+
+## node version
+
+using nvm, install `14.16.0`
+
+```bash
+nvm install 14.16.0
+nvm use 14.16.0
+```
+
+`.nvmrc` exists, so all you need is to have an [NVM extension in VSCode](https://marketplace.visualstudio.com/items?itemName=abumalick.vscode-nvm) to load the correct version when you open the project
